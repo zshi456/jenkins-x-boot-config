@@ -1,0 +1,20 @@
+Step: build-step-git-source-cb-kubecd-environment-jstrachan-d5k6m:
+
+{"level":"warn","ts":1561718863.9025052,"logger":"fallback-logger","caller":"logging/config.go:65","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1561718865.589734,"logger":"fallback-logger","caller":"git/git.go:102","msg":"Successfully cloned https://github.com/cb-kubecd/environment-jstrachan-ad1-staging @ v0.0.66 in path /workspace/source"}
+Step: build-step-git-merge:
+
+Warning failed to load version: failed to parse version -dev+9e73adc0b: No Major.Minor.Patch elements found
+time="2019-06-28T10:47:47Z" level=info msg="got "
+time="2019-06-28T10:47:47Z" level=warning msg="no SHAs to merge, falling back to initial cloned commit"
+Using SHAs from PULL_REFS=master:f86d68f141b9832af01b2e37cee3e015a2759362
+Step: build-step-setup-**-git-credentials:
+
+Generated Git credentials file /builder/home/git/credentials
+Step: build-step-build-helm-apply:
+
+Modified file /workspace/source/env/Chart.yaml to set the chart to version 6
+Copying the helm source directory /workspace/source/env to a temporary location for building and applying /tmp/**-helm-apply-276764601/env
+Applying helm chart at /tmp/**-helm-apply-276764601/env as release name ** to namespace **-staging
+Ignoring templates/.gitignore
+error: generating values.yaml for tree from /tmp/**-helm-apply-276764601/env: failed to render template of file /tmp/**-helm-apply-276764601/env/values.yaml: failed to execute Secrets template: /tmp/**-helm-apply-276764601/env/values.yaml: template: values.yaml:26:20: executing "values.yaml" at <.Service>: map has no entry for key "Service"
