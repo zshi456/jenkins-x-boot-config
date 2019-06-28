@@ -1,0 +1,13 @@
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  creationTimestamp: null
+  name: jstrachan-nodey126
+spec:
+  org: jstrachan
+  provider: https://github.com
+  providerName: github
+  repo: nodey126
+  scheduler:
+    kind: ""
+    name: ""

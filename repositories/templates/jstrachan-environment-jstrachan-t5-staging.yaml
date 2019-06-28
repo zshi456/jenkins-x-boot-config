@@ -1,0 +1,14 @@
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  creationTimestamp: null
+  name: jstrachan-environment-jstrachan-t5-staging
+spec:
+  description: Imported application for jstrachan/environment-jstrachan-t5-staging
+  org: jstrachan
+  provider: https://github.com
+  providerName: github
+  repo: environment-jstrachan-t5-staging
+  scheduler:
+    kind: ""
+    name: ""
