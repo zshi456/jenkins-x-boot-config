@@ -1,0 +1,14 @@
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  creationTimestamp: null
+  name: cb-kubecd-environment-jstrachan-ad1-staging
+spec:
+  description: Imported application for cb-kubecd/environment-jstrachan-ad1-staging
+  org: cb-kubecd
+  provider: https://github.com
+  providerName: github
+  repo: environment-jstrachan-ad1-staging
+  scheduler:
+    kind: ""
+    name: ""

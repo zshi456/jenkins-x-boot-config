@@ -1,0 +1,15 @@
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  creationTimestamp: null
+  name: jstrachan-environment-simple-tekton
+spec:
+  description: the git repository for the Dev environment - used to manage the Jenkins
+    X installation
+  org: jstrachan
+  provider: https://github.com
+  providerName: github
+  repo: environment-simple-tekton
+  scheduler:
+    kind: Scheduler
+    name: env-scheduler

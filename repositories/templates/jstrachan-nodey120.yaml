@@ -1,0 +1,14 @@
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  creationTimestamp: null
+  name: jstrachan-nodey120
+spec:
+  description: Imported application for jstrachan/nodey120
+  org: jstrachan
+  provider: https://github.com
+  providerName: github
+  repo: nodey120
+  scheduler:
+    kind: ""
+    name: ""
