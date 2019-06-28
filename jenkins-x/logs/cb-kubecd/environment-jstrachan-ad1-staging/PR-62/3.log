@@ -1,0 +1,33 @@
+Step: build-step-git-source-cb-kubecd-environment-jstrachan-6tzwj:
+
+{"level":"warn","ts":1561717958.1734598,"logger":"fallback-logger","caller":"logging/config.go:65","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1561717959.6212995,"logger":"fallback-logger","caller":"git/git.go:102","msg":"Successfully cloned https://github.com/cb-kubecd/environment-jstrachan-ad1-staging @ 4197e7eab4c73caed35360cbaa3a4eeb7893c168 in path /workspace/source"}
+Step: build-step-git-merge:
+
+Warning failed to load version: failed to parse version -dev+9e73adc0b: No Major.Minor.Patch elements found
+time="2019-06-28T10:32:40Z" level=info msg="got "
+Using SHAs from PULL_REFS=master:8f6ed7cf1f345d01796d2e004ac4c010d742a2e3,62:4197e7eab4c73caed35360cbaa3a4eeb7893c168
+ran git fetch --unshallow origin 4197e7eab4c73caed35360cbaa3a4eeb7893c168: 8f6ed7cf1f345d01796d2e004ac4c010d742a2e3: in 
+ran git checkout master in 
+ran git reset --hard 8f6ed7cf1f345d01796d2e004ac4c010d742a2e3 in 
+ran clean --force -d . in 
+ran git merge 4197e7eab4c73caed35360cbaa3a4eeb7893c168 in 
+Step: build-step-build-helm-build:
+
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io
+Successfully added Helm repository storage.googleapis.com.
+Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080
+Successfully added Helm repository jenkins-x-chartmuseum.
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: chartmuseum.jenkins-x.io http://chartmuseum.jenkins-x.io
+Successfully added Helm repository chartmuseum.jenkins-x.io.
+error: failed to build the dependencies of chart '.': failed to run 'helm dependency build' command in directory '.', output: 'Hang tight while we grab the latest from your chart repositories...
+...Unable to get an update from the "local" chart repository (http://127.0.0.1:8879/charts):
+	Get http://127.0.0.1:8879/charts/index.yaml: dial tcp 127.0.0.1:8879: connect: connection refused
+...Successfully got an update from the "jenkins-x-chartmuseum" chart repository
+...Successfully got an update from the "chartmuseum.jenkins-x.io" chart repository
+...Successfully got an update from the "storage.googleapis.com" chart repository
+...Successfully got an update from the "stable" chart repository
+Update Complete.
+Error: Can't get a valid version for repositories nodey126. Try changing the version constraint in requirements.yaml'
