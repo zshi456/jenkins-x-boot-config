@@ -1,0 +1,110 @@
+Step: build-step-git-source-jstrachan-nodey120-master-w7k82:
+
+{"level":"warn","ts":1561716665.1857884,"logger":"fallback-logger","caller":"logging/config.go:65","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1561716666.6867464,"logger":"fallback-logger","caller":"git/git.go:102","msg":"Successfully cloned https://github.com/jstrachan/nodey120 @ v0.0.4 in path /workspace/source"}
+Step: build-step-git-merge:
+
+Warning failed to load version: failed to parse version -dev+9e73adc0b: No Major.Minor.Patch elements found
+time="2019-06-28T10:11:07Z" level=info msg="got "
+time="2019-06-28T10:11:07Z" level=warning msg="no SHAs to merge, falling back to initial cloned commit"
+Using SHAs from PULL_REFS=master:
+Step: build-step-setup-**-git-credentials:
+
+{"level":"info","msg":"Generated Git credentials file /workspace/xdg_config/git/credentials\n","time":"2019-06-28T10:11:08Z"}
+Step: build-step-build-npmrc:
+
+WARNING: failed to find Secret npm-token in namespace **
+Step: build-step-build-npm-install:
+
+npm notice created a lockfile as package-lock.json. You should commit this file.
+npm WARN REPLACE_ME@1.0.0 No repository field.
+npm WARN REPLACE_ME@1.0.0 No license field.
+
+up to date in 0.454s
+found 0 vulnerabilities
+
+Step: build-step-build-npm-test:
+
+
+> REPLACE_ME@1.0.0 test /workspace/source
+> echo "no test specified" && exit 0
+
+no test specified
+Step: build-step-build-container-build:
+
+[36mINFO[0m[0000] Downloading base image node:9-slim           
+ERROR: logging before flag.Parse: E0628 10:11:14.403959      10 metadata.go:159] while reading 'google-dockercfg-url' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg-url
+ERROR: logging before flag.Parse: E0628 10:11:14.425168      10 metadata.go:142] while reading 'google-dockercfg' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg
+2019/06/28 10:11:14 No matching credentials were found, falling back on anonymous
+[36mINFO[0m[0002] Error while retrieving image from cache: getting file info: stat /workspace/sha256:0e0175bbe4f8d9d104590d8d2c591017874e30977cb71aaff1cf6fa99479575c: no such file or directory 
+[36mINFO[0m[0002] Downloading base image node:9-slim           
+2019/06/28 10:11:16 No matching credentials were found, falling back on anonymous
+[36mINFO[0m[0003] Executing 0 build triggers                   
+[36mINFO[0m[0003] cmd: EXPOSE                                  
+[36mINFO[0m[0003] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0003] Using files from context: [/workspace/source] 
+[36mINFO[0m[0003] Skipping unpacking as no commands require it. 
+[36mINFO[0m[0003] Taking snapshot of full filesystem...        
+[36mINFO[0m[0004] ENV PORT 8080                                
+[36mINFO[0m[0004] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0004] EXPOSE 8080                                  
+[36mINFO[0m[0004] cmd: EXPOSE                                  
+[36mINFO[0m[0004] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0004] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0004] WORKDIR /usr/src/app                         
+[36mINFO[0m[0004] cmd: workdir                                 
+[36mINFO[0m[0004] Changed working directory to /usr/src/app    
+[36mINFO[0m[0004] Creating directory /usr/src/app              
+[36mINFO[0m[0004] Taking snapshot of files...                  
+[36mINFO[0m[0004] Using files from context: [/workspace/source] 
+[36mINFO[0m[0004] COPY . .                                     
+[36mINFO[0m[0004] Taking snapshot of files...                  
+[36mINFO[0m[0004] CMD ["npm", "start"]                         
+[36mINFO[0m[0004] No files changed in this command, skipping snapshotting. 
+2019/06/28 10:11:19 pushed blob: sha256:34aac5ae98ba6aa04a5ddecc762a26ba9919cd48c9755f5db81c10349c149a59
+2019/06/28 10:11:19 pushed blob: sha256:c74bad094b9770eed22c64899d101a08a590f3ecf6a03b6cc1af8fa567a526d2
+2019/06/28 10:11:19 pushed blob: sha256:fbaea68eff0eefd8d26e4b50b98f4f47dcd5800c7c64571026fd88c879a1cd7b
+2019/06/28 10:11:19 pushed blob: sha256:7d083412657baa2dafba8d093034ef26f9ed2c90fb6ed95f76bb55aff03ed429
+2019/06/28 10:11:19 pushed blob: sha256:196b8e3c919d5639193ba6c6e54774528942041bbc37606631a2250502985c3c
+2019/06/28 10:11:19 pushed blob: sha256:e01bd28a434b56ffd2a3fe9aa99b9b69aecca69904843edd30b1ee7150d79904
+2019/06/28 10:11:21 pushed blob: sha256:5bba3ecb4cd6374a19da45f2a3db0a9c0804984358b3bb4b666c28944016e5ff
+2019/06/28 10:11:22 pushed blob: sha256:a88538b9cd05cfa611e43a25582a95ad7879f6fa708b0386a26b71ee62235bb3
+2019/06/28 10:11:22 10.0.41.239:5000/jenkins-x-infra/nodey120:0.0.4: digest: sha256:fad1d163a4259e4f46485e874aad9f9278f190abc804afa17fdb17d96fbef8ec size: 1404
+Step: build-step-build-post-build:
+
+{"level":"info","msg":"no CVE provider running in the current ** namespace so skip adding image to be analysed","time":"2019-06-28T10:11:22Z"}
+Step: build-step-promote-changelog:
+
+{"level":"info","msg":"Converted /workspace/source/charts/nodey120 to an unshallow repository\n","time":"2019-06-28T10:11:26Z"}
+{"level":"info","msg":"Generating change log from git ref 4cc4d155392fce62b08e80fc60019922e1e56cf2 =\u003e f54f6fd56c2d7cd23424cd555ada2a5abbd04fdc\n","time":"2019-06-28T10:11:26Z"}
+{"level":"warning","msg":"Failed to enrich commits with issues: User.jenkins.io \"-0\" is invalid: metadata.name: Invalid value: \"-0\": a DNS-1123 subdomain must consist of lower case alphanumeric characters, '-' or '.', and must start and end with an alphanumeric character (e.g. 'example.com', regex used for validation is '[a-z0-9]([-a-z0-9]*[a-z0-9])?(\\.[a-z0-9]([-a-z0-9]*[a-z0-9])?)*')\n","time":"2019-06-28T10:11:26Z"}
+{"level":"warning","msg":"Failed to enrich commits with issues: User.jenkins.io \"-0\" is invalid: metadata.name: Invalid value: \"-0\": a DNS-1123 subdomain must consist of lower case alphanumeric characters, '-' or '.', and must start and end with an alphanumeric character (e.g. 'example.com', regex used for validation is '[a-z0-9]([-a-z0-9]*[a-z0-9])?(\\.[a-z0-9]([-a-z0-9]*[a-z0-9])?)*')\n","time":"2019-06-28T10:11:26Z"}
+{"level":"info","msg":"Finding issues in commit messages using git format\n","time":"2019-06-28T10:11:26Z"}
+{"level":"warning","msg":"No release found for jstrachan/nodey120 and tag v0.0.4 so creating a new release\n","time":"2019-06-28T10:11:27Z"}
+{"level":"info","msg":"Updated the release information at https://github.com/jstrachan/nodey120/releases/tag/v0.0.4\n","time":"2019-06-28T10:11:27Z"}
+{"level":"info","msg":"generated: /workspace/source/charts/nodey120/templates/release.yaml\n","time":"2019-06-28T10:11:27Z"}
+{"level":"info","msg":"Created Release nodey120-0-0-4 resource in namespace **\n","time":"2019-06-28T10:11:27Z"}
+{"level":"info","msg":"Updating PipelineActivity jstrachan-nodey120-master-1 with version 0.0.4\n","time":"2019-06-28T10:11:27Z"}
+{"level":"info","msg":"Updated PipelineActivities jstrachan-nodey120-master-1 with release notes URL: https://github.com/jstrachan/nodey120/releases/tag/v0.0.4\n","time":"2019-06-28T10:11:28Z"}
+Step: build-step-promote-helm-release:
+
+{"level":"warning","msg":"No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080\n","time":"2019-06-28T10:11:29Z"}
+{"level":"info","msg":"Adding missing Helm repo: chartmuseum.jenkins-x.io http://chartmuseum.jenkins-x.io\n","time":"2019-06-28T10:11:33Z"}
+{"level":"info","msg":"Successfully added Helm repository chartmuseum.jenkins-x.io.\n","time":"2019-06-28T10:11:35Z"}
+{"level":"info","msg":"Adding missing Helm repo: jenkins-x-chartmuseum:8080 http://jenkins-x-chartmuseum:8080\n","time":"2019-06-28T10:11:35Z"}
+{"level":"info","msg":"Successfully added Helm repository jenkins-x-chartmuseum:8080.\n","time":"2019-06-28T10:11:35Z"}
+{"level":"warning","msg":"No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080\n","time":"2019-06-28T10:11:36Z"}
+{"level":"info","msg":"Uploading chart file nodey120-0.0.4.tgz to http://jenkins-x-chartmuseum:8080/api/charts\n","time":"2019-06-28T10:11:36Z"}
+{"level":"info","msg":"Received 201 response: {\"saved\":true}\n","time":"2019-06-28T10:11:36Z"}
+Step: build-step-promote-**-promote:
+
+{"level":"warning","msg":"prow based install so skip waiting for the merge of Pull Requests to go green as currently there is an issue with gettingstatuses from the PR, see https://github.com/jenkins-x/**/issues/2410","time":"2019-06-28T10:11:37Z"}
+{"level":"info","msg":"Promoting app nodey120 version 0.0.4 to namespace **-staging\n","time":"2019-06-28T10:11:37Z"}
+{"level":"info","msg":"Created Pull Request: https://github.com/cb-kubecd/environment-jstrachan-ad1-staging/pull/60\n\n","time":"2019-06-28T10:11:45Z"}
+{"level":"warning","msg":"Failed to query the Pull Request last commit status for https://github.com/cb-kubecd/environment-jstrachan-ad1-staging/pull/60 ref fad82bae469a5ff9bdde3b1ee0fd7ad09f0c8beb Could not find a status for repository cb-kubecd/environment-jstrachan-ad1-staging with ref fad82bae469a5ff9bdde3b1ee0fd7ad09f0c8beb\n","time":"2019-06-28T10:11:49Z"}
+{"level":"info","msg":"Rebasing PullRequest due to conflict","time":"2019-06-28T10:31:41Z"}
+{"level":"info","msg":"Rebasing PullRequest due to conflict","time":"2019-06-28T10:32:06Z"}
+{"level":"info","msg":"Created Pull Request: https://github.com/cb-kubecd/environment-jstrachan-ad1-staging/pull/62\n\n","time":"2019-06-28T10:32:15Z"}
+{"level":"info","msg":"Pull Request https://github.com/cb-kubecd/environment-jstrachan-ad1-staging/pull/62 is merged at sha 46cbc27bfc73b7ee64a597afee61040c52f5a813\n","time":"2019-06-28T10:33:18Z"}
+{"level":"info","msg":"Pull Request merged but we are not waiting for the update pipeline to complete!","time":"2019-06-28T10:33:18Z"}
+{"level":"warning","msg":"Could not find the service URL in namespace **-staging for names nodey120, **-nodey120, **-staging-nodey120\n","time":"2019-06-28T10:33:18Z"}
