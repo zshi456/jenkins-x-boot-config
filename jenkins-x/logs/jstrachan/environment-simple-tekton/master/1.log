@@ -1,0 +1,39 @@
+Step: build-step-git-source-jstrachan-environment-simple-te-kwzkr:
+
+{"level":"warn","ts":1561716550.2977285,"logger":"fallback-logger","caller":"logging/config.go:65","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1561716551.875976,"logger":"fallback-logger","caller":"git/git.go:102","msg":"Successfully cloned https://github.com/jstrachan/environment-simple-tekton @ v0.0.1 in path /workspace/source"}
+Step: build-step-git-merge:
+
+Warning failed to load version: failed to parse version -dev+9e73adc0b: No Major.Minor.Patch elements found
+time="2019-06-28T10:09:14Z" level=info msg="got "
+Using SHAs from PULL_REFS=master:8fe174c654d578174aaa39798d27d4ff117e56ab
+time="2019-06-28T10:09:15Z" level=warning msg="no SHAs to merge, falling back to initial cloned commit"
+Step: build-step-verify-preintall:
+
+error: failed to determine the application name and namespace from pipeline activity: could not determine the application name and namespace from activity 'jstrachan-environment-simple-tekton-master-1'
+Step: build-step-**-crds:
+
+Step: build-step-kube-system:
+
+Step: build-step-helm-cluster-values:
+
+Step: build-step-install-vault:
+
+Step: build-step-cert-manager-crds:
+
+Step: build-step-cert-manager:
+
+Step: build-step-helm-populate-params:
+
+Step: build-step-helm-build:
+
+Step: build-step-log-repos:
+
+Step: build-step-apply-repositories:
+
+Step: build-step-apply-pipeline-schedulers:
+
+Step: build-step-update-webhooks:
+
+Step: build-step-verify-install:
+
